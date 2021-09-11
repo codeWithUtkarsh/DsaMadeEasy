@@ -1,0 +1,28 @@
+//Solution in Java
+//Input: N = 5
+//A[] = {1, 2, 3, 4, 5}
+
+class Compute {
+    
+    //Output: 5 1 2 3 4
+    public void rotateClockWise(int arr[], int n)
+    {
+        for(int i=1; i<n; i++)
+        {
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+        }
+    }
+    
+    //Output: 2 3 4 5 1 
+    public void rotateAntiClockWise(int arr[], int n)
+    {
+        for(int i=0; i<n-1; i++)
+        {
+            int temp = arr[i];
+            arr[i] = arr[i+1];
+            arr[i+1] = temp;
+        }
+    }
+}
