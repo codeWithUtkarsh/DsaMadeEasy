@@ -1,0 +1,11 @@
+largestAnswer = 0
+
+currLargest = 0
+for() //iterate
+{
+  //update currLargest += element
+  
+  //if currLargest < 0 update currLargest = 0
+      
+  //update largest
+}
