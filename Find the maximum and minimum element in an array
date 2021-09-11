@@ -1,0 +1,34 @@
+//without recursion
+//double pointer for efficiency
+
+static private int[] getMinMax(int[] data)
+	{
+		
+		int min = Integer.MAX_VALUE;
+		int max = Integer.MIN_VALUE;
+		
+		int lPointer = 0;
+		int rPointer = data.length-1;
+		while(lPointer <= rPointer)
+		{
+			if(lPointer == rPointer) {
+				max = Math.max(max, data[rPointer]);
+				min = Math.min(min, data[rPointer]);
+			
+			}else {
+				max = Math.max(max, Math.max(data[lPointer], data[rPointer]));
+				min = Math.min(min, Math.min(data[lPointer], data[rPointer]));
+				
+			}
+			
+			lPointer++;
+			rPointer--;
+		}
+		
+		int[] res = {min, max};
+		return res;
+	}
+  
+  //recursion
+  
+  
