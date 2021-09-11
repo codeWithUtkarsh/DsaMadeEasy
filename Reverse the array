@@ -1,0 +1,14 @@
+//Input  : arr[] = {1, 2, 3}
+//Output : arr[] = {3, 2, 1}
+
+two pointer method
+
+leftPointer = 0
+rightPointer = n-1
+
+while(leftPointer < rightPointer)
+{
+  //swap arr[leftPointer], arr[rightPointer]
+  
+  leftPointer++;
+}
