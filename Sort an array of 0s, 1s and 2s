@@ -1,0 +1,62 @@
+//not a best solution for large data set
+
+int low = 0;
+        int high = n-1;
+        
+        int tra = 0;
+        int tmp = 0;
+        while(tra < n)
+        {
+            switch(a[tra])
+            {
+                case 0:{
+                     //swap current element with arr[low] and increment low
+                }
+                case 1:{
+                    //increate traverse counter
+                }
+                case 2:{
+                    //swap current element with arr[high] and decrement high
+                }
+            }
+            
+            tra++;
+        }
+        
+        
+  //for large dataset use the bucket sort
+  
+      public static void sort012(int a[], int n)
+    {
+        int one = 0;
+        int zero = 0;
+        int two = 0;
+        for(int elem:a)
+        {
+            if(elem == 0)
+                zero++;
+                
+            if(elem == 1)
+                one++;
+                
+            if(elem == 2)
+                two++;
+            
+        }
+        
+        int i=0;
+        while(zero-- > 0)
+        {
+            a[i++] = 0;
+        }
+        
+        while(one-- > 0)
+        {
+            a[i++] = 1;
+        }
+        
+        while(two-- > 0)
+        {
+            a[i++] = 2;
+        }
+    }
