@@ -1,0 +1,20 @@
+private static void getSolution(int[] a)
+	{
+		int lPoint = 0;
+		int rPoint = a.length - 1;
+		int t = 0;
+		while(t<a.length)
+		{
+			//If element is positive then find a negative number and rotate
+			if(a[t] >= 0)
+			{
+				lPoint = t;
+				rPoint = t;
+				while(rPoint < a.length && a[rPoint] >= 0)rPoint++;
+				
+				if(rPoint < a.length)
+					rotateClockwise(a, lPoint, rPoint);
+			}
+			t++;
+		}
+	}
