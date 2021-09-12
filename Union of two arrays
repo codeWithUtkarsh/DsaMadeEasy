@@ -1,0 +1,12 @@
+//Union of two arrays
+
+public static int doUnion(int a[], int n, int b[], int m) 
+    {
+        int count = 0;
+        for(int elem:b)
+        {
+            if(!contain(a, elem))
+                count++;
+        }
+        return a.length + count;
+    }
